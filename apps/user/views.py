@@ -1,6 +1,7 @@
 from rest_framework import viewsets, filters, pagination
 from django.contrib.auth.models import User
 from .serializers import UserSerializer
+from rest_framework.exceptions import ParseError
 
 class UserViewSet(viewsets.ModelViewSet):
 	queryset = User.objects.all()
