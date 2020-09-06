@@ -62,7 +62,6 @@
 5. Di folder ***root*** ketikkan perintah ini
 - ``python manage.py makemigrations``
 - ``python manage.py migrate``
-- ``python manage.py runserver``
 6. Di folder ***apps/user*** buat file baru : serializers.py
     ```python
     from rest_framework import serializers
@@ -115,3 +114,17 @@
     	path('', include(router.urls)),
     ]
     ```
+8. Di folder ***root/drf*** ubah file urls.py menjadi
+    ```python
+    from django.contrib import admin
+    from django.urls import include, path
+    
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('apps.user.urls')),
+    ]
+    ```
+8. Oke sekarang silahkan coba dengan postman
+``python manage.py runserver``
+
+
