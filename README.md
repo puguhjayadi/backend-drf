@@ -60,6 +60,7 @@
     CORS_ORIGIN_ALLOW_ALL = True
     ```
 5. Di folder ***root*** ketikkan perintah ini
+- ``pipenv shell``
 - ``python manage.py makemigrations``
 - ``python manage.py migrate``
 6. Di folder ***apps/user*** buat file baru : serializers.py
